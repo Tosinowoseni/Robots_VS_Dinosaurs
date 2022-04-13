@@ -1,17 +1,17 @@
-#Name: Tosin
-#Date: 09 April 2022
-#File: robot.py
-#Proj: Robots vs Dinosaurs
+from Weapon import Weapon
 
-#imports
-from weapon import Weapon
-from dinosaur import Dinosaur
-
-class Robot:
-    def __init__(self, name, health):
+class Robots:
+    
+    def __init__(self, name):
         self.name = name
-        self.health = health
-        self.weapon = Weapon("Pulse Rifle", 50)
-
+        self.health = 100
+        self.weapon = Weapon('Robo-Punch', 10, 10)
+        self.power_level = 100
+        self.status = 'active'
+       
+    
     def attack(self, dinosaur):
         dinosaur.health -= self.weapon.attack_power
+        self.power_level -= 10
+
+ 

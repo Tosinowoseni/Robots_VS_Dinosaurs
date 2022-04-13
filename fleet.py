@@ -1,21 +1,27 @@
-#Name: Tosin Owoseni
-#Date: April 9th 2022
-#File: fleet.py
-#Proj: Robots vs. Dinosaurs
-
-#imports
-from robot import Robot
+from Robots import Robots
+from Dinosaur import Dinosaur
+from Weapon import Weapon
 
 class Fleet:
     def __init__(self):
-        self.robots_list = []
-        self.create_fleet()
+        self.robots = []
+        self.armory = []
 
+    
+           
+    
     def create_fleet(self):
-        tank = Robot("Ground Pounder", 100)
-        scout = Robot("Recon", 80)
-        sniper = Robot("Killshot", 80)
+        robot01 = Robots('Johnny #5')
+        robot02 = Robots('C3PO')
+        robot03 = Robots('HAL')
+        self.robots.append(robot01)
+        self.robots.append(robot02)
+        self.robots.append(robot03)
 
-        self.robots_list.append(tank)
-        self.robots_list.append(scout)
-        self.robots_list.append(sniper)
+    def create_armory(self):
+        weapon_01 = Weapon('Laser Gun', 20, 9)
+        weapon_02 = Weapon('Flamethrower', 25, 8)
+        weapon_03 = Weapon('Bazooka', 30, 7)
+        self.armory.append(weapon_01)
+        self.armory.append(weapon_02)
+        self.armory.append(weapon_03)

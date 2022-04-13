@@ -1,16 +1,15 @@
-#Name: Tosin Owoseni
-#Date: April 9th 2022
-#File: dinosaur.py
-#Proj: Robots vs. Dinosaurs
+from Weapon import Weapon
 
-#imports
-#from robot import Robot
 
 class Dinosaur:
-    def __init__(self,name,health, attack_power):
+
+    def __init__(self, name, ):
         self.name = name
-        self.attack_power = attack_power
-        self.health = health
+        self.health = 100  
+        self.energy = 100
+        self.move = Weapon('Dino Bite', 10, 10)
+        self.status = 'active'
 
     def attack(self, robot):
-        robot.health -= self.attack_power
+        robot.health -= self.move.attack_power
+        self.energy -= 10

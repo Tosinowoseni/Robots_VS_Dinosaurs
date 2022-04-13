@@ -1,21 +1,24 @@
-#Name: Tosin Owoseni
-#Date: April 9th 2022
-#File: herd.py
-#Proj: Robots Vs Dinosaurs
-
-#imports
-from dinosaur import Dinosaur
+from Dinosaur import Dinosaur
+from Weapon import Weapon
 
 class Herd:
     def __init__(self):
-        self.dinosaur_list = []
-        self.create_herd()
+        self.dinosaurs = []
+        self.move = ()
+        
+        
 
     def create_herd(self):
-        trex = Dinosaur("T-Rex", 100, 50)
-        raptor = Dinosaur("Raptor", 80, 40)
-        flyer = Dinosaur("Pterodactyl",80, 40)
+            dino01 = Dinosaur('Barney')
+            dino02 = Dinosaur('Rex')
+            dino03 = Dinosaur('Ptera')
+            self.dinosaurs.append(dino01)
+            self.dinosaurs.append(dino02)
+            self.dinosaurs.append(dino03)
 
-        self.dinosaur_list.append(trex)
-        self.dinosaur_list.append(raptor)
-        self.dinosaur_list.append(flyer)
+    def create_repertoire(self):
+        move_01 = Weapon('Bull Rush', 20, 10)
+        move_02 = Weapon('Chomp Stomp', 20, 10)
+        move_03 = Weapon('Pteradactyl Swoop', 20, 10)
+        self.move = (move_01, move_02, move_03)
+       
