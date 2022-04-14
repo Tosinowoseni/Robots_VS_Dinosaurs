@@ -1,24 +1,16 @@
 from Dinosaur import Dinosaur
-from Weapon import Weapon
 
 class Herd:
     def __init__(self):
         self.dinosaurs = []
-        self.move = ()
-        
-        
-
+        self.create_herd()
+    
+    #creates a herd of dinosaurs
     def create_herd(self):
-            dino01 = Dinosaur('Barney')
-            dino02 = Dinosaur('Rex')
-            dino03 = Dinosaur('Ptera')
-            self.dinosaurs.append(dino01)
-            self.dinosaurs.append(dino02)
-            self.dinosaurs.append(dino03)
-
-    def create_repertoire(self):
-        move_01 = Weapon('Bull Rush', 20, 10)
-        move_02 = Weapon('Chomp Stomp', 20, 10)
-        move_03 = Weapon('Pteradactyl Swoop', 20, 10)
-        self.move = (move_01, move_02, move_03)
-       
+        dino_one = Dinosaur('Rex the T-Rex', 40)
+        dino_two = Dinosaur('Petr the Pterodactyl', 20)
+        dino_three = Dinosaur('Vela the Velociraptor', 20)
+        self.dinosaurs.append(dino_one)
+        self.dinosaurs.append(dino_two)
+        self.dinosaurs.append(dino_three)
+        
